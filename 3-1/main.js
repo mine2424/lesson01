@@ -1,17 +1,16 @@
-
-var array01 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var array02 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
+// arrayWidthでつくったものを一つにの配列に入れる
 var array99 = [];
-for (var i = 0; i < array01.length; i++) {
+for (var i = 1; i < 10; i++) {
+    // 一行単位で作る配列
     var arrayWidth = [];
-    for (var j = 0; j < array02.length; j++) {
-        arrayWidth.push(array01[i] * array02[j]);
+
+    for (var j = 1; j < 10; j++) {
+        arrayWidth.push(i * j);
     }
+
     array99.push(arrayWidth);
-    const deleteArr = arrayWidth.join(",")
-    const deleteComma = deleteArr.split(',').join(' ')
-    console.table(deleteComma)
+    const deleteArr = arrayWidth.join("\t")
+    console.log(deleteArr)
 }
 
 
