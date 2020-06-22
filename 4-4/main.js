@@ -3,12 +3,13 @@ const newArr = []
 
 for (i = 0; i < 10; i++) {
     while (true) {
-        var randomNum = Math.floor(Math.random() * numArr.length);
+        const randomNum = Math.floor(Math.random() * numArr.length);
         if (!newArr.includes(randomNum)) {
             newArr.push(randomNum)
             break;
         }
     }
+
 }
 
 console.log(newArr.join(' '))
