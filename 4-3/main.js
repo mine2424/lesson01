@@ -6,6 +6,6 @@ const errorLogs = [
 
 for (i = 0; i < errorLogs.length; i++) {
   const newArr = errorLogs[i].split(/[:,-]/)
-  console.log(newArr[1])
+  console.log(newArr[1].replace(' ', ''))
 
 }
