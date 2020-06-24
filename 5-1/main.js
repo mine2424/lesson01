@@ -19,8 +19,8 @@ const profiles = {
   ]
 }
 
-for (i = 0; i < profiles.profiles.length; i++) {
-  const nameArr = profiles.profiles[i].name
-  const ageArr = profiles.profiles[i].age
+for (const profile of profiles.profiles) {
+  const nameArr = profile.name
+  const ageArr = profile.age
   console.log(`${nameArr}:${ageArr}`)
 }
