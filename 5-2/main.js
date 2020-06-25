@@ -1,26 +1,28 @@
 const salary = require('./users.json');
+//文字省略のために新定義
 const users = salary.users
-for (i = 0; i < users.length; i++) {
-    
-    if ("A" === users[i].rank) {
-        if ( 5 <= users[i].years) {
-            users[i].salary = 3000 * users[i].years + 120000
+//計算する関数
+function calcSalary(number,wage) {
+    return user.salary = number * user.years + wage;
+}
+//"A","B","C"で振り分けして、"A"のみ年数でも振り分ける
+for (user of users) {
+    if ("A" === user.rank) {
+        if (5 <= user.years) {
+            calcSalary(3000,120000)
         } else {
-            users[i].salary = 3000 * users[i].years + 100000
+            calcSalary(3000,100000)
         }
-    } else if ("B" === users[i].rank) {
-        users[i].salary = 4000 * users[i].years + 140000
+    } else if ("B" === user.rank) {
+        calcSalary(4000,140000)
     } else {
-        users[i].salary = 5000 * users[i].years + 160000
+        calcSalary(5000,160000)
     }
 }
-
 users.sort(function (a, b) {
     return b.salary - a.salary;
 });
-
-for (i = 0; i < users.length; i++) {
-    console.log(`${users[i].name}:${users[i].salary}`)
+for (user of users) {
+    console.log(`${user.name}:${user.salary}`)
 }
-
 
