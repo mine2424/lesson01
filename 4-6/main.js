@@ -28,6 +28,6 @@ if (60 <= result) {
         const hours02 = modelHours - 24;
         output(hours02,result)
     } else {
-        output(test,result)
+        output(modelHours,result)
     }
 }
